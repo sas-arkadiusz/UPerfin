@@ -1,0 +1,12 @@
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\UPerfin.exe.config
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\UPerfin.exe
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\UPerfin.pdb
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.csprojAssemblyReference.cache
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.AuthenticationProcess.LoginForm.resources
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Properties.Resources.resources
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.csproj.GenerateResource.cache
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.csproj.CoreCompileInputs.cache
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.exe
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.pdb
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.AuthenticationProcess.PasswordLoginForm.resources
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.AuthenticationProcess.PinLoginForm.resources

@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenticationProcess\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationProcess\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationProcess\PasswordLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationProcess\PasswordLoginForm.Designer.cs">
+      <DependentUpon>PasswordLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationProcess\PinLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationProcess\PinLoginForm.Designer.cs">
+      <DependentUpon>PinLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationProcess\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationProcess\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +78,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AuthenticationProcess\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthenticationProcess\PasswordLoginForm.resx">
+      <DependentUpon>PasswordLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthenticationProcess\PinLoginForm.resx">
+      <DependentUpon>PinLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +109,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Pictures\PasswordPicture.png" />
+    <Content Include="Resources\Pictures\PasswordPicture_32x32.png" />
+    <None Include="Resources\Pictures\PasswordPicture_32x32_Blue.png" />
+    <Content Include="Resources\Pictures\PictureUPerfin.png" />
+    <Content Include="Resources\Pictures\PictureUPerfin_100x100.png" />
+    <None Include="Resources\Pictures\PinPicture_32x32.png" />
+    <None Include="Resources\Pictures\PinPicture_32x32_Blue.png" />
+    <Content Include="Resources\Pictures\UserPicture.png" />
+    <Content Include="Resources\Pictures\UserPicture_32x32.png" />
+    <Content Include="Resources\Pictures\UserPicture_32x32_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backgrounds\BackgroundLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Icons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

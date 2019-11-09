@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace UPerfin.AuthenticationProcess
 {
-    public partial class PasswordLoginForm : Form
+    public partial class PasswordLoginForm : LoginForm
     {
         public PasswordLoginForm()
         {
             InitializeComponent();
+        }
+
+        private void AnotherSignInOptionButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm pinLoginForm = new PinLoginForm();
+            pinLoginForm.Closed += (s, args) => this.Close();
+            pinLoginForm.Show();
         }
     }
 }
