@@ -58,7 +58,8 @@ namespace UPerfin.AuthenticationProcess
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("A");
+            string a = "haslo";
+            Console.WriteLine(a.GetHashCode());
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)

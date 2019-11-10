@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace UPerfin.AuthenticationProcess
 {
-    public partial class RegisterForm : Form
+    public partial class RegisterForm : LoginForm
     {
         public RegisterForm()
         {

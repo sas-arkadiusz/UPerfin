@@ -1,6 +1,6 @@
 ﻿namespace UPerfin.AuthenticationProcess
 {
-    partial class RegisterForm
+    partial class RegisterForm : LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -26,11 +26,11 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private new void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            //this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "RegisterForm";
         }
 

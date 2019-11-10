@@ -10,3 +10,6 @@ C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.exe
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.pdb
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.AuthenticationProcess.PasswordLoginForm.resources
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.AuthenticationProcess.PinLoginForm.resources
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\uperfindb.mdf
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\uperfindb_log.ldf
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.AuthenticationProcess.RegisterForm.resources
