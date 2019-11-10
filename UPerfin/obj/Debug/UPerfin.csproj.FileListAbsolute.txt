@@ -13,3 +13,8 @@ C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.AuthenticationPro
 C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\uperfindb.mdf
 C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\uperfindb_log.ldf
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.AuthenticationProcess.RegisterForm.resources
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\EntityFramework.dll
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\EntityFramework.SqlServer.dll
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\EntityFramework.xml
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\EntityFramework.SqlServer.xml
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.csproj.CopyComplete
