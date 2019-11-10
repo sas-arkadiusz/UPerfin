@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UPerfin.Models;
+using UPerfin.Dashboard;
 
 namespace UPerfin.AuthenticationProcess
 {
@@ -39,6 +40,14 @@ namespace UPerfin.AuthenticationProcess
             UsernameTextBox_Clicked(sender, e);
         }
 
+        private void UsernameTextBox_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                SignInButton_Click(sender, e);
+            }
+        }
+
         private void PasswordTextBox_Clicked(object sender, EventArgs e)
         {
             if (passwordTextBox.Text.Equals("Password"))
@@ -59,9 +68,35 @@ namespace UPerfin.AuthenticationProcess
 
         }
 
+        private void PasswordTextBox_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                SignInButton_Click(sender, e);
+            }
+        }
+
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(_userAuthenticator.AuthenticateUser(usernameTextBox.Text, passwordTextBox.Text));
+            if(_userAuthenticator.AuthenticateUser(usernameTextBox.Text, passwordTextBox.Text) != 0)
+            {
+                this.Hide();
+                DashboardForm dashboardForm = new DashboardForm();
+                dashboardForm.Closed += (s, args) => this.Close();
+                dashboardForm.Show();
+            } 
+            else
+            {
+                this.infoLabel.Text = "Wrong username or password!";
+            }
+        }
+
+        private void SignInButton_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                SignInButton_Click(sender, e);
+            }
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)

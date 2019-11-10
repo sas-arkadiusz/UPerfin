@@ -1,6 +1,6 @@
 ﻿namespace UPerfin.Dashboard
 {
-    partial class Dashboard
+    partial class DashboardForm
     {
         /// <summary>
         /// Required designer variable.

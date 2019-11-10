@@ -40,6 +40,7 @@
             this.signInButton = new System.Windows.Forms.Button();
             this.registerButton = new System.Windows.Forms.Button();
             this.anotherSignInOptionButton = new System.Windows.Forms.Button();
+            this.infoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loginBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uperfinPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePicture)).BeginInit();
@@ -92,6 +93,7 @@
             this.usernameTextBox.Text = "Username";
             this.usernameTextBox.Click += new System.EventHandler(this.UsernameTextBox_Clicked);
             this.usernameTextBox.TextChanged += new System.EventHandler(this.UsernameTextBox_TextChanged);
+            this.usernameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsernameTextBox_KeyPressed);
             // 
             // usernameUnderline
             // 
@@ -125,6 +127,7 @@
             this.passwordTextBox.TabIndex = 6;
             this.passwordTextBox.Click += new System.EventHandler(this.PasswordTextBox_Clicked);
             this.passwordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
+            this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPressed);
             // 
             // passwordUnderline
             // 
@@ -141,13 +144,14 @@
             this.signInButton.FlatAppearance.BorderSize = 0;
             this.signInButton.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.signInButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.signInButton.Location = new System.Drawing.Point(440, 375);
+            this.signInButton.Location = new System.Drawing.Point(440, 381);
             this.signInButton.Name = "signInButton";
             this.signInButton.Size = new System.Drawing.Size(347, 45);
             this.signInButton.TabIndex = 9;
             this.signInButton.Text = "Sign In";
             this.signInButton.UseVisualStyleBackColor = false;
             this.signInButton.Click += new System.EventHandler(this.SignInButton_Click);
+            this.signInButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignInButton_KeyPressed);
             // 
             // registerButton
             // 
@@ -177,6 +181,15 @@
             this.anotherSignInOptionButton.TabIndex = 11;
             this.anotherSignInOptionButton.UseVisualStyleBackColor = false;
             // 
+            // infoLabel
+            // 
+            this.infoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.infoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.infoLabel.Location = new System.Drawing.Point(440, 358);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Size = new System.Drawing.Size(347, 17);
+            this.infoLabel.TabIndex = 12;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -184,6 +197,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.anotherSignInOptionButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.signInButton);
@@ -223,5 +237,6 @@
         protected System.Windows.Forms.Button signInButton;
         protected System.Windows.Forms.Button registerButton;
         protected System.Windows.Forms.Button anotherSignInOptionButton;
+        private System.Windows.Forms.Label infoLabel;
     }
 }
