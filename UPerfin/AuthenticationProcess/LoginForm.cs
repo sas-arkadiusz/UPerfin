@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UPerfin.Models;
 
 namespace UPerfin.AuthenticationProcess
 {
     public partial class LoginForm : Form
     {
+        UserAuthenticator _userAuthenticator = new UserAuthenticator();
+
         public LoginForm()
         {
             InitializeComponent();
@@ -58,8 +61,7 @@ namespace UPerfin.AuthenticationProcess
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            string a = "haslo";
-            Console.WriteLine(a.GetHashCode());
+            Console.WriteLine(_userAuthenticator.AuthenticateUser(usernameTextBox.Text, passwordTextBox.Text));
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
