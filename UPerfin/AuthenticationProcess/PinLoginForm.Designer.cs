@@ -46,6 +46,7 @@
             // 
             this.passwordTextBox.MaxLength = 4;
             this.passwordTextBox.Text = "4-Digit PIN";
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPressed);
             // 
             // signInButton

@@ -41,6 +41,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Text = "Password";
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPressed);
             // 
             // signInButton

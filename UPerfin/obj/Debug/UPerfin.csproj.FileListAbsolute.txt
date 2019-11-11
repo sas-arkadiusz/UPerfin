@@ -18,3 +18,4 @@ C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\EntityFramework.SqlServer
 C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\EntityFramework.xml
 C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\EntityFramework.SqlServer.xml
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.csproj.CopyComplete
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.DashboardForm.resources

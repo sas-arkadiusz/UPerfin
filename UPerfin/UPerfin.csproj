@@ -127,6 +127,9 @@
     <Compile Include="ObservableListSource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\RoundedPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="uperfindbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AuthenticationProcess\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,6 +207,8 @@
     <None Include="Resources\Pictures\MailPicture_32x32.png" />
     <None Include="Resources\Pictures\BackArrow.png" />
     <None Include="Resources\Pictures\BackArrow_32x32.png" />
+    <None Include="Resources\Avatars\Santa_64x64.png" />
+    <None Include="Resources\Avatars\Avocado_64x64.png" />
     <Content Include="Resources\Pictures\PasswordPicture.png" />
     <Content Include="Resources\Pictures\PasswordPicture_32x32.png" />
     <Content Include="uperfindb.mdf">

@@ -63,6 +63,16 @@ namespace UPerfin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Avocado_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Avocado_64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BackArrow {
             get {
                 object obj = ResourceManager.GetObject("BackArrow", resourceCulture);
@@ -146,6 +156,16 @@ namespace UPerfin.Properties {
         internal static System.Drawing.Bitmap PinPicture_32x32_Blue {
             get {
                 object obj = ResourceManager.GetObject("PinPicture_32x32_Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Santa_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Santa_64x64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
