@@ -66,6 +66,7 @@
             this.signInButton.Location = new System.Drawing.Point(440, 505);
             this.signInButton.Text = "Register";
             this.signInButton.Click += new System.EventHandler(this.RegisterButton_Click);
+            this.signInButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignInButton_KeyPressed);
             // 
             // registerButton
             // 
@@ -143,6 +144,7 @@
             this.pinTextBox.TabIndex = 17;
             this.pinTextBox.Text = "PIN";
             this.pinTextBox.Click += new System.EventHandler(this.PinTextBox_Click);
+            this.pinTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pin_KeyPressed);
             // 
             // pinUnderline
             // 

@@ -117,13 +117,37 @@ namespace UPerfin.AuthenticationProcess
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
+            infoLabel.Text = "";
             UserRegistration userRegistration = new UserRegistration();
-            userRegistration.RegisterUser(
-                usernameTextBox.Text.Trim(), 
-                emailTextBox.Text.Trim(), 
-                passwordTextBox.Text.Trim(), 
-                pinTextBox.Text.Trim());
-            BackPicture_Click(sender, e);
+            if (userRegistration.RegisterUser(
+                usernameTextBox.Text.Trim(),
+                emailTextBox.Text.Trim(),
+                passwordTextBox.Text.Trim(),
+                pinTextBox.Text.Trim()))
+            {
+                BackPicture_Click(sender, e);
+            }
+            else
+            {
+                infoLabel.Text = "Your credentials are not valid/are not unique!";
+            }
+            
+        }
+
+        private void Pin_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                RegisterButton_Click(sender, e);
+            }
+        }
+
+        private void SignInButton_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                RegisterButton_Click(sender, e);
+            }
         }
     }
 }

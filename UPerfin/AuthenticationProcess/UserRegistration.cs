@@ -15,7 +15,7 @@ namespace UPerfin.AuthenticationProcess
         private readonly uperfindbEntities _context = new uperfindbEntities();
         private delegate bool ValidateCredentials(string username, string email, string password, string pin);
 
-        public void RegisterUser(string username, string email, string password, string pin)
+        public bool RegisterUser(string username, string email, string password, string pin)
         {
             ValidateCredentials validateCredentials = new ValidateCredentials(ValidateLength);
             validateCredentials += ValidateAllCredentials;
@@ -24,6 +24,11 @@ namespace UPerfin.AuthenticationProcess
             {
                 User user = CreateUser(username, email, password, pin);
                 SaveUser(user);
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
