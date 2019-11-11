@@ -60,7 +60,10 @@ namespace UPerfin.AuthenticationProcess
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("C");
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Closed += (s, args) => this.Close();
+            registerForm.Show();
         }
     }
     

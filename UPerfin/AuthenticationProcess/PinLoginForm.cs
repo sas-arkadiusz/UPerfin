@@ -38,7 +38,7 @@ namespace UPerfin.AuthenticationProcess
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            if (_userAuthenticator.AuthenticateUser(usernameTextBox.Text, Int32.Parse(passwordTextBox.Text)) != 0)
+            if (_userAuthenticator.AuthenticateUser(usernameTextBox.Text.Trim(), Int32.Parse(passwordTextBox.Text.Trim())) != 0)
             {
                 this.Hide();
                 DashboardForm dashboardForm = new DashboardForm();

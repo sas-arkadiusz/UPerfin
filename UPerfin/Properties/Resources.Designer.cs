@@ -63,9 +63,49 @@ namespace UPerfin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BackArrow {
+            get {
+                object obj = ResourceManager.GetObject("BackArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BackArrow_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("BackArrow_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BackgroundLogin {
             get {
                 object obj = ResourceManager.GetObject("BackgroundLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MailPicture_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("MailPicture_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MailPicture_32x32_Blue {
+            get {
+                object obj = ResourceManager.GetObject("MailPicture_32x32_Blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

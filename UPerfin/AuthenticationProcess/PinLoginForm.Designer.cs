@@ -73,7 +73,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Name = "PinLoginForm";
-            this.Text = "PinLoginForm";
             ((System.ComponentModel.ISupportInitialize)(this.loginBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uperfinPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePicture)).EndInit();

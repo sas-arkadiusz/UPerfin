@@ -47,7 +47,6 @@
             // 
             this.signInButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.signInButton.FlatAppearance.BorderSize = 0;
-            this.signInButton.Text = "Sign in";
             this.signInButton.Click += new System.EventHandler(this.SignInButton_Click);
             this.signInButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignInButton_KeyPressed);
             // 
@@ -69,7 +68,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Name = "PasswordLoginForm";
-            this.Text = "PasswordLoginForm";
             ((System.ComponentModel.ISupportInitialize)(this.loginBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uperfinPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePicture)).EndInit();
