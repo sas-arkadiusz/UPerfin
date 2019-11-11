@@ -100,6 +100,7 @@
     <Compile Include="AuthenticationProcess\UserAuthenticator.cs" />
     <Compile Include="AuthenticationProcess\UserRegistration.cs" />
     <Compile Include="Constants\RegistrationAnnotation.cs" />
+    <Compile Include="Constants\UserAvatar.cs" />
     <Compile Include="Dashboard\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +131,8 @@
     <Compile Include="Resources\RoundedPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Services\IDataService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="uperfindbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -209,6 +212,7 @@
     <None Include="Resources\Pictures\BackArrow_32x32.png" />
     <None Include="Resources\Avatars\Santa_64x64.png" />
     <None Include="Resources\Avatars\Avocado_64x64.png" />
+    <None Include="Resources\Avatars\Batman_64x64.png" />
     <Content Include="Resources\Pictures\PasswordPicture.png" />
     <Content Include="Resources\Pictures\PasswordPicture_32x32.png" />
     <Content Include="uperfindb.mdf">
@@ -231,6 +235,7 @@
     <None Include="Resources\Backgrounds\BackgroundLogin.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DAOs\" />
     <Folder Include="Resources\Icons\" />
   </ItemGroup>
   <ItemGroup>

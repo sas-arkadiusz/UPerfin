@@ -38,10 +38,11 @@ namespace UPerfin.AuthenticationProcess
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            if (_userAuthenticator.AuthenticateUser(usernameTextBox.Text.Trim(), Int32.Parse(passwordTextBox.Text.Trim())) != 0)
+            int userId = _userAuthenticator.AuthenticateUser(usernameTextBox.Text.Trim(), Int32.Parse(passwordTextBox.Text.Trim()));
+            if (userId != 0)
             {
                 this.Hide();
-                DashboardForm dashboardForm = new DashboardForm();
+                DashboardForm dashboardForm = new DashboardForm(userId);
                 dashboardForm.Closed += (s, args) => this.Close();
                 dashboardForm.Show();
             }

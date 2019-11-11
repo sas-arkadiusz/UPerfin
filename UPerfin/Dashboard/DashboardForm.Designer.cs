@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.helloLabel = new System.Windows.Forms.Label();
-            this.roundedPictureBox1 = new UPerfin.Resources.RoundedPictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).BeginInit();
+            this.avatarPicture = new UPerfin.Resources.RoundedPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,22 +64,22 @@
             this.helloLabel.TabIndex = 2;
             this.helloLabel.Text = "Hello, Username!";
             // 
-            // roundedPictureBox1
+            // avatarPicture
             // 
-            this.roundedPictureBox1.BackgroundImage = global::UPerfin.Properties.Resources.Avocado_64x64;
-            this.roundedPictureBox1.Location = new System.Drawing.Point(89, 54);
-            this.roundedPictureBox1.Name = "roundedPictureBox1";
-            this.roundedPictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.roundedPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.roundedPictureBox1.TabIndex = 4;
-            this.roundedPictureBox1.TabStop = false;
+            this.avatarPicture.BackgroundImage = global::UPerfin.Properties.Resources.Avocado_64x64;
+            this.avatarPicture.Location = new System.Drawing.Point(89, 54);
+            this.avatarPicture.Name = "avatarPicture";
+            this.avatarPicture.Size = new System.Drawing.Size(64, 64);
+            this.avatarPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.avatarPicture.TabIndex = 4;
+            this.avatarPicture.TabStop = false;
             // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.roundedPictureBox1);
+            this.Controls.Add(this.avatarPicture);
             this.Controls.Add(this.helloLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -87,7 +87,8 @@
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UPerfin";
-            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.Dashboard_OnLoad);
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,6 +99,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label helloLabel;
-        private Resources.RoundedPictureBox roundedPictureBox1;
+        private Resources.RoundedPictureBox avatarPicture;
     }
 }

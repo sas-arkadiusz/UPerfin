@@ -19,5 +19,6 @@ namespace UPerfin.Models
         public string Password { get; set; }
         public string Email { get; set; }
         public string PIN { get; set; }
+        public string Avatar { get; set; }
     }
 }

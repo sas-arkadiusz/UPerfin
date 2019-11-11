@@ -14,6 +14,7 @@
           <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Email" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="PIN" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Avatar" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityContainer Name="uperfindbModelStoreContainer">
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
@@ -31,6 +32,7 @@
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="PIN" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="uperfindbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="User" EntityType="Self.User" />
@@ -44,6 +46,7 @@
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="uperfindbModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
                 <ScalarProperty Name="PIN" ColumnName="PIN" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
