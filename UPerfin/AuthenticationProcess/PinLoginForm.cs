@@ -13,6 +13,8 @@ namespace UPerfin.AuthenticationProcess
 {
     public partial class PinLoginForm : LoginForm
     {
+        private UserAuthenticator _userAuthenticator = new UserAuthenticator();
+
         public PinLoginForm()
         {
             InitializeComponent();

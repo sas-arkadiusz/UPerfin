@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace UPerfin.AuthenticationProcess
 {
     class UserAuthenticator
     {
-        private readonly UperfindbContext _context = new UperfindbContext();
+        private readonly uperfindbEntities _context = new uperfindbEntities();
         private delegate string ValidatePassword(string password);
 
         public int AuthenticateUser(string username, string password)
@@ -17,7 +18,7 @@ namespace UPerfin.AuthenticationProcess
             ValidatePassword validatePassword = new ValidatePassword(HashPassword);
             string _hashedPassword = validatePassword(password);
 
-            return FindUserId(username, _hashedPassword);
+            return FindUserIdByPassword(username, _hashedPassword);
         }
 
         public int AuthenticateUser(string username, int pin)
@@ -28,7 +29,7 @@ namespace UPerfin.AuthenticationProcess
             validatePassword += HashPassword;
             string _hashedPassword = validatePassword(_pin);
 
-            return FindUserId(username, _hashedPassword);
+            return FindUserIdByPin(username, _hashedPassword);
         }
 
         // Method returns PIN as a string value
@@ -50,17 +51,12 @@ namespace UPerfin.AuthenticationProcess
             return password.GetHashCode().ToString();
         }
 
-        // Method returns userId for the provided credentials or 0 if account does not exsist
-        private int FindUserId(string username, string password)
-        {
-            // Find the requested account
-            var _userTable = _context.User;
-            var _queryResult = _userTable.Where(user => user.Username.Equals(username) && user.Password.Equals(password));
-
-            // Return authenticated userId
+        // Method returns authenticated userId
+        private int FindAuthenticatedUserId(IQueryable<User> queryResult)
+        {            
             try
             {
-                return _queryResult.First().Id;
+                return queryResult.First().Id;
             }
             catch (InvalidOperationException exception)
             {
@@ -68,6 +64,26 @@ namespace UPerfin.AuthenticationProcess
                 Console.WriteLine(exception.StackTrace);
                 return 0;
             }
+        }
+
+        // Method returns userId for the provided password or 0 if account does not exsist
+        private int FindUserIdByPassword(string username, string password)
+        {
+            // Find the requested account
+            var _userTable = _context.User;
+            var _queryResult = _userTable.Where(user => user.Username.Equals(username) && user.Password.Equals(password));
+
+            return FindAuthenticatedUserId(_queryResult);
+        }
+
+        // Method returns userId for the provided PIN or 0 if account does not exsist
+        private int FindUserIdByPin(string username, string pin)
+        {
+            // Find the requested account
+            var _userTable = _context.User;
+            var _queryResult = _userTable.Where(user => user.Username.Equals(username) && user.PIN.Equals(pin));
+
+            return FindAuthenticatedUserId(_queryResult);
         }
     }
 }

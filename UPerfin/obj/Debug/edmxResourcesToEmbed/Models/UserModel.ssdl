@@ -8,6 +8,7 @@
     <Property Name="Username" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="Email" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="PIN" Type="nvarchar" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityContainer Name="uperfindbModelStoreContainer">
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />

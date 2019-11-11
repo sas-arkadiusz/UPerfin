@@ -14,8 +14,6 @@ namespace UPerfin.AuthenticationProcess
 {
     public partial class LoginForm : Form
     {
-        protected UserAuthenticator _userAuthenticator = new UserAuthenticator();
-
         public LoginForm()
         {
             InitializeComponent();

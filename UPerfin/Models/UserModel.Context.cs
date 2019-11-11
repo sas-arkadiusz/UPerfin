@@ -13,9 +13,9 @@ namespace UPerfin.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class UperfindbContext : DbContext
+    public partial class uperfindbEntities : DbContext
     {
-        public UperfindbContext()
+        public uperfindbEntities()
             : base("name=uperfindbEntities")
         {
         }

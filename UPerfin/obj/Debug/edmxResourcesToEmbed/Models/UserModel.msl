@@ -4,6 +4,7 @@
     <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="uperfindbModel.User">
         <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="PIN" ColumnName="PIN" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="Password" ColumnName="Password" />
