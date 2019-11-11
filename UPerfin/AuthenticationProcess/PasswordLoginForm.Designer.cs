@@ -34,14 +34,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.passwordPicture)).BeginInit();
             this.SuspendLayout();
             // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsernameTextBox_KeyPressed);
+            // 
             // passwordTextBox
             // 
             this.passwordTextBox.Text = "Password";
+            this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPressed);
             // 
             // signInButton
             // 
             this.signInButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.signInButton.FlatAppearance.BorderSize = 0;
+            this.signInButton.Text = "Sign in";
+            this.signInButton.Click += new System.EventHandler(this.SignInButton_Click);
+            this.signInButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignInButton_KeyPressed);
             // 
             // registerButton
             // 

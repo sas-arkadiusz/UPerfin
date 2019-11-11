@@ -14,7 +14,7 @@ namespace UPerfin.AuthenticationProcess
 {
     public partial class LoginForm : Form
     {
-        UserAuthenticator _userAuthenticator = new UserAuthenticator();
+        protected UserAuthenticator _userAuthenticator = new UserAuthenticator();
 
         public LoginForm()
         {
@@ -40,17 +40,9 @@ namespace UPerfin.AuthenticationProcess
             UsernameTextBox_Clicked(sender, e);
         }
 
-        private void UsernameTextBox_KeyPressed(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                SignInButton_Click(sender, e);
-            }
-        }
-
         private void PasswordTextBox_Clicked(object sender, EventArgs e)
         {
-            if (passwordTextBox.Text.Equals("Password"))
+            if (passwordTextBox.Text.Equals("Password") || passwordTextBox.Text.Equals("4-Digit PIN"))
             {
                 passwordTextBox.Text = "";
             }
@@ -66,37 +58,6 @@ namespace UPerfin.AuthenticationProcess
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void PasswordTextBox_KeyPressed(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                SignInButton_Click(sender, e);
-            }
-        }
-
-        private void SignInButton_Click(object sender, EventArgs e)
-        {
-            if(_userAuthenticator.AuthenticateUser(usernameTextBox.Text, passwordTextBox.Text) != 0)
-            {
-                this.Hide();
-                DashboardForm dashboardForm = new DashboardForm();
-                dashboardForm.Closed += (s, args) => this.Close();
-                dashboardForm.Show();
-            } 
-            else
-            {
-                this.infoLabel.Text = "Wrong username or password!";
-            }
-        }
-
-        private void SignInButton_KeyPressed(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                SignInButton_Click(sender, e);
-            }
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)

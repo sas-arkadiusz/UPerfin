@@ -93,7 +93,6 @@
             this.usernameTextBox.Text = "Username";
             this.usernameTextBox.Click += new System.EventHandler(this.UsernameTextBox_Clicked);
             this.usernameTextBox.TextChanged += new System.EventHandler(this.UsernameTextBox_TextChanged);
-            this.usernameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsernameTextBox_KeyPressed);
             // 
             // usernameUnderline
             // 
@@ -127,7 +126,6 @@
             this.passwordTextBox.TabIndex = 6;
             this.passwordTextBox.Click += new System.EventHandler(this.PasswordTextBox_Clicked);
             this.passwordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
-            this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPressed);
             // 
             // passwordUnderline
             // 
@@ -148,10 +146,8 @@
             this.signInButton.Name = "signInButton";
             this.signInButton.Size = new System.Drawing.Size(347, 45);
             this.signInButton.TabIndex = 9;
-            this.signInButton.Text = "Sign In";
+            this.signInButton.Text = "Sign in";
             this.signInButton.UseVisualStyleBackColor = false;
-            this.signInButton.Click += new System.EventHandler(this.SignInButton_Click);
-            this.signInButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignInButton_KeyPressed);
             // 
             // registerButton
             // 
@@ -237,6 +233,6 @@
         protected System.Windows.Forms.Button signInButton;
         protected System.Windows.Forms.Button registerButton;
         protected System.Windows.Forms.Button anotherSignInOptionButton;
-        private System.Windows.Forms.Label infoLabel;
+        protected System.Windows.Forms.Label infoLabel;
     }
 }

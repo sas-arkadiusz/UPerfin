@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UPerfin.Dashboard;
 
 namespace UPerfin.AuthenticationProcess
 {
@@ -15,6 +16,45 @@ namespace UPerfin.AuthenticationProcess
         public PinLoginForm()
         {
             InitializeComponent();
+        }
+
+        private void UsernameTextBox_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                SignInButton_Click(sender, e);
+            }
+        }
+
+        private void PasswordTextBox_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                SignInButton_Click(sender, e);
+            }
+        }
+
+        private void SignInButton_Click(object sender, EventArgs e)
+        {
+            if (_userAuthenticator.AuthenticateUser(usernameTextBox.Text, Int32.Parse(passwordTextBox.Text)) != 0)
+            {
+                this.Hide();
+                DashboardForm dashboardForm = new DashboardForm();
+                dashboardForm.Closed += (s, args) => this.Close();
+                dashboardForm.Show();
+            }
+            else
+            {
+                this.infoLabel.Text = "Wrong username or password!";
+            }
+        }
+
+        private void SignInButton_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                SignInButton_Click(sender, e);
+            }
         }
 
         private void AnotherSignInOptionButton_Click(object sender, EventArgs e)
