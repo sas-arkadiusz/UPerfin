@@ -101,6 +101,8 @@
     <Compile Include="AuthenticationProcess\UserRegistration.cs" />
     <Compile Include="Constants\RegistrationAnnotation.cs" />
     <Compile Include="Constants\UserAvatar.cs" />
+    <Compile Include="DAOs\IDataDAO.cs" />
+    <Compile Include="DAOs\UserDAO.cs" />
     <Compile Include="Dashboard\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,7 +237,6 @@
     <None Include="Resources\Backgrounds\BackgroundLogin.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAOs\" />
     <Folder Include="Resources\Icons\" />
   </ItemGroup>
   <ItemGroup>
