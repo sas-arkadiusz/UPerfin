@@ -10,7 +10,6 @@ namespace UPerfin.Services
 {
     class UserService : IDataService<User>
     {
-        private readonly uperfindbEntities _context = new uperfindbEntities();
         private readonly IDataDAO<User> _userDAO = new UserDAO();
 
         public User GetElementById(int id)
