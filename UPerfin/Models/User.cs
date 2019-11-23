@@ -20,5 +20,9 @@ namespace UPerfin.Models
         public string Email { get; set; }
         public string PIN { get; set; }
         public string Avatar { get; set; }
+        //public Transaction Transaction { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ObservableListSource<Transaction> Transaction { get; set; }
     }
 }

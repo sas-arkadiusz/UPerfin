@@ -6,6 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="95d329b9e97940afb926e3069457dcbc" Name="Diagram1">
         <EntityTypeShape EntityType="uperfindbModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="uperfindbModel.Transaction" Width="1.5" PointX="3" PointY="5.25" />
+        <AssociationConnector Association="uperfindbModel.FK__Transacti__UserI__73BA3083" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

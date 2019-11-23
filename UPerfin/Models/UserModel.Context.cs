@@ -26,5 +26,6 @@ namespace UPerfin.Models
         }
     
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Transaction> Transaction { get; set; }
     }
 }

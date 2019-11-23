@@ -10,8 +10,39 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="PIN" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Avatar" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Transaction" Relationship="uperfindbModel.FK__Transacti__UserI__73BA3083" FromRole="User" ToRole="Transaction" />
   </EntityType>
   <EntityContainer Name="uperfindbEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="Transaction" EntityType="uperfindbModel.Transaction" />
+    <AssociationSet Name="FK__Transacti__UserI__73BA3083" Association="uperfindbModel.FK__Transacti__UserI__73BA3083">
+      <End Role="User" EntitySet="User" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="TransactionName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TransactionAmount" Type="Decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="TransactionCategory" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="TransactionDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="IsFixedOutgoing" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="uperfindbModel.FK__Transacti__UserI__73BA3083" FromRole="Transaction" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__Transacti__UserI__73BA3083">
+    <End Type="uperfindbModel.User" Role="User" Multiplicity="1" />
+    <End Type="uperfindbModel.Transaction" Role="Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
