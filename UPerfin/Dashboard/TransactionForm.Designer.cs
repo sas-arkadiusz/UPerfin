@@ -28,19 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionForm));
             this.SuspendLayout();
             // 
-            // MainForm
+            // DashboardButton
+            // 
+            this.DashboardButton.FlatAppearance.BorderSize = 0;
+            // 
+            // TransactionButton
+            // 
+            this.TransactionButton.Enabled = false;
+            this.TransactionButton.FlatAppearance.BorderSize = 0;
+            // 
+            // FixedOutgoingButton
+            // 
+            this.FixedOutgoingButton.FlatAppearance.BorderSize = 0;
+            // 
+            // SavingPlanButton
+            // 
+            this.SavingPlanButton.FlatAppearance.BorderSize = 0;
+            // 
+            // ReportButton
+            // 
+            this.ReportButton.FlatAppearance.BorderSize = 0;
+            // 
+            // VehicleOperationButton
+            // 
+            this.VehicleOperationButton.FlatAppearance.BorderSize = 0;
+            // 
+            // DepositGainButton
+            // 
+            this.DepositGainButton.FlatAppearance.BorderSize = 0;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            // 
+            // SignOutButton
+            // 
+            this.SignOutButton.FlatAppearance.BorderSize = 0;
+            // 
+            // SettingsButton
+            // 
+            this.SettingsButton.FlatAppearance.BorderSize = 0;
+            // 
+            // TransactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 585);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TransactionForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UPerfin";
             this.ResumeLayout(false);
+
         }
 
         #endregion

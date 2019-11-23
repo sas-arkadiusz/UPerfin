@@ -42,8 +42,7 @@ namespace UPerfin.AuthenticationProcess
             if (userId != 0)
             {
                 this.Hide();
-                //DashboardForm dashboardForm = new DashboardForm(userId);
-                MainForm dashboardForm = new MainForm();
+                DashboardForm dashboardForm = new DashboardForm(userId);
                 dashboardForm.Closed += (s, args) => this.Close();
                 dashboardForm.Show();
             }

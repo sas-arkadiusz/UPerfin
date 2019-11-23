@@ -77,6 +77,7 @@
             this.DashboardButton.TabIndex = 3;
             this.DashboardButton.Text = "Dashboard";
             this.DashboardButton.UseVisualStyleBackColor = false;
+            this.DashboardButton.Click += new System.EventHandler(this.DashboardButton_Click);
             // 
             // HeaderLabel
             // 
@@ -103,6 +104,7 @@
             this.TransactionButton.TabIndex = 5;
             this.TransactionButton.Text = "Transactions";
             this.TransactionButton.UseVisualStyleBackColor = false;
+            this.TransactionButton.Click += new System.EventHandler(this.TransactionsButton_Click);
             // 
             // FixedOutgoingButton
             // 
@@ -117,6 +119,7 @@
             this.FixedOutgoingButton.TabIndex = 6;
             this.FixedOutgoingButton.Text = "Fixed Outgoings";
             this.FixedOutgoingButton.UseVisualStyleBackColor = false;
+            this.FixedOutgoingButton.Click += new System.EventHandler(this.FixedOutgoingsButton_Click);
             // 
             // SavingPlanButton
             // 
@@ -131,6 +134,7 @@
             this.SavingPlanButton.TabIndex = 7;
             this.SavingPlanButton.Text = "Saving Plans";
             this.SavingPlanButton.UseVisualStyleBackColor = false;
+            this.SavingPlanButton.Click += new System.EventHandler(this.SavingPlansButton_Click);
             // 
             // ReportButton
             // 
@@ -145,6 +149,7 @@
             this.ReportButton.TabIndex = 8;
             this.ReportButton.Text = "Reports";
             this.ReportButton.UseVisualStyleBackColor = false;
+            this.ReportButton.Click += new System.EventHandler(this.ReportsButton_Click);
             // 
             // VehicleOperationButton
             // 
@@ -159,6 +164,7 @@
             this.VehicleOperationButton.TabIndex = 9;
             this.VehicleOperationButton.Text = "Vehicle Operation";
             this.VehicleOperationButton.UseVisualStyleBackColor = false;
+            this.VehicleOperationButton.Click += new System.EventHandler(this.VehicleOperationButton_Click);
             // 
             // CalculatorLabel
             // 
@@ -185,6 +191,7 @@
             this.DepositGainButton.TabIndex = 11;
             this.DepositGainButton.Text = "Deposit Gains";
             this.DepositGainButton.UseVisualStyleBackColor = false;
+            this.DepositGainButton.Click += new System.EventHandler(this.DepositGainsButton_Click);
             // 
             // button2
             // 
@@ -199,6 +206,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Budgets";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.BudgetsButton_Click);
             // 
             // SignOutButton
             // 
@@ -213,6 +221,7 @@
             this.SignOutButton.TabIndex = 13;
             this.SignOutButton.Text = "Sign Out";
             this.SignOutButton.UseVisualStyleBackColor = false;
+            this.SignOutButton.Click += new System.EventHandler(this.SignOutButton_Click);
             // 
             // SettingsButton
             // 
@@ -227,6 +236,7 @@
             this.SettingsButton.TabIndex = 14;
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.UseVisualStyleBackColor = false;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // NavigationLabel
             // 
@@ -272,18 +282,18 @@
 
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button DashboardButton;
-        private System.Windows.Forms.Label HeaderLabel;
-        private System.Windows.Forms.Button TransactionButton;
-        private System.Windows.Forms.Button FixedOutgoingButton;
-        private System.Windows.Forms.Button SavingPlanButton;
-        private System.Windows.Forms.Button ReportButton;
-        private System.Windows.Forms.Button VehicleOperationButton;
-        private System.Windows.Forms.Label CalculatorLabel;
-        private System.Windows.Forms.Button DepositGainButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button SignOutButton;
-        private System.Windows.Forms.Button SettingsButton;
-        private System.Windows.Forms.Label NavigationLabel;
+        protected System.Windows.Forms.Button DashboardButton;
+        protected System.Windows.Forms.Label HeaderLabel;
+        protected System.Windows.Forms.Button TransactionButton;
+        protected System.Windows.Forms.Button FixedOutgoingButton;
+        protected System.Windows.Forms.Button SavingPlanButton;
+        protected System.Windows.Forms.Button ReportButton;
+        protected System.Windows.Forms.Button VehicleOperationButton;
+        protected System.Windows.Forms.Label CalculatorLabel;
+        protected System.Windows.Forms.Button DepositGainButton;
+        protected System.Windows.Forms.Button button2;
+        protected System.Windows.Forms.Button SignOutButton;
+        protected System.Windows.Forms.Button SettingsButton;
+        protected System.Windows.Forms.Label NavigationLabel;
     }
 }
