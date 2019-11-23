@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace UPerfin.Resources
 {
-    class RoundedPictureBox : PictureBox
+    public class RoundedPictureBox : PictureBox
     {
         protected override void OnPaint(PaintEventArgs pe)
         {

@@ -153,6 +153,16 @@ namespace UPerfin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PictureUPerfin_100x100 {
+            get {
+                object obj = ResourceManager.GetObject("PictureUPerfin_100x100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PinPicture_32x32 {
             get {
                 object obj = ResourceManager.GetObject("PinPicture_32x32", resourceCulture);
