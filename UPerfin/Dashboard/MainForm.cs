@@ -13,6 +13,8 @@ namespace UPerfin.Dashboard
 {
     public partial class MainForm : Form
     {
+        protected int userId = 0;
+
         public MainForm()
         {
             InitializeComponent();
@@ -20,12 +22,12 @@ namespace UPerfin.Dashboard
 
         private void DashboardButton_Click(object sender, EventArgs e)
         {
-            MenuNavigation.RunDashboardForm(this);
+            MenuNavigation.RunDashboardForm(this, userId);
         }
 
         private void TransactionsButton_Click(object sender, EventArgs e)
         {
-            MenuNavigation.RunTransactionForm(this);
+            MenuNavigation.RunTransactionForm(this, userId);
         }
 
         private void FixedOutgoingsButton_Click(object sender, EventArgs e)

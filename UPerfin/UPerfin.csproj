@@ -157,6 +157,11 @@
     </Compile>
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="transactionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>transactionDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="uperfindbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,6 +218,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="transactionDataSet.xsc">
+      <DependentUpon>transactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="transactionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>transactionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="transactionDataSet.xss">
+      <DependentUpon>transactionDataSet.xsd</DependentUpon>
+    </None>
     <None Include="uperfindbDataSet.xsc">
       <DependentUpon>uperfindbDataSet.xsd</DependentUpon>
     </None>

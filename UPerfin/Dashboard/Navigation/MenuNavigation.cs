@@ -9,18 +9,18 @@ namespace UPerfin.Dashboard.Navigation
 {
     public class MenuNavigation
     {
-        public static void RunDashboardForm(MainForm form)
+        public static void RunDashboardForm(MainForm form, int userId)
         {
             form.Hide();
-            DashboardForm dashboardForm = new DashboardForm();
+            DashboardForm dashboardForm = new DashboardForm(userId);
             dashboardForm.Closed += (s, args) => form.Close();
             dashboardForm.Show();
         }
 
-        public static void RunTransactionForm(MainForm form)
+        public static void RunTransactionForm(MainForm form, int userId)
         {
             form.Hide();
-            TransactionForm transactionForm = new TransactionForm();
+            TransactionForm transactionForm = new TransactionForm(userId);
             transactionForm.Closed += (s, args) => form.Close();
             transactionForm.Show();
         }

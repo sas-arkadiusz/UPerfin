@@ -12,8 +12,6 @@ namespace UPerfin.Dashboard
 {
     public partial class DashboardForm : MainForm
     {
-        protected int userId;
-
         public DashboardForm()
         {
             InitializeComponent();
