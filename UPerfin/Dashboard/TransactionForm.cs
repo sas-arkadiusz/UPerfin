@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.SqlServer;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -56,7 +57,7 @@ namespace UPerfin.Dashboard
             var result = _context.Transaction.Where(transaction => transaction.UserId == userId);
             if (_HideFixedOutgoings) result = result.Where(transaction => transaction.IsFixedOutgoing == false);
             if (_HideCategoryFood) result = result.Where(transaction => !(transaction.TransactionCategory.Equals(Category.Food.ToString())));
-            if (_HideCategoryHealthAndMedical) result = result.Where(transaction => !(transaction.TransactionCategory.Equals(Category.HealthAndMedical.ToString())));
+            if (_HideCategoryHealthAndMedical) result = result.Where(transaction => !(transaction.TransactionCategory.Equals(Category.Health.ToString())));
             if (_HideCategoryShopping) result = result.Where(transaction => !(transaction.TransactionCategory.Equals(Category.Shopping.ToString())));
             if (_HideCategoryTransport) result = result.Where(transaction => !(transaction.TransactionCategory.Equals(Category.Transport.ToString())));
             if (_HideCategoryBills) result = result.Where(transaction => !(transaction.TransactionCategory.Equals(Category.Bills.ToString())));
@@ -80,6 +81,37 @@ namespace UPerfin.Dashboard
             _HideTransactionsOlderThanMonth = LastMonthRadioButton.Checked;
             _HideTransactionsOlderThan3Months = Last3MonthsRadioButton.Checked;
             _HideTransactionsOlderThan12Months = Last12MonthsRadioButton.Checked;
+        }
+
+        private void AddTransactionToDatabase(Transaction transaction)
+        {
+            _context.Transaction.Add(transaction);
+            _context.SaveChanges();
+            UpdateDataGridView();
+        }
+
+        private Transaction ValidateTransactionCreation()
+        {
+            try
+            {
+                Transaction transaction = new Transaction
+                {
+                    UserId = userId,
+                    TransactionName = TransactionNameTextBox.Text,
+                    TransactionAmount = Decimal.Parse(TransactionAmountTextBox.Text),
+                    TransactionCategory = TransactionCategoryComboBox.Text,
+                    TransactionDate = DateTime.Now,
+                    IsFixedOutgoing = FixedOutgoingsCheckBox.Checked
+                };
+
+                ErrorLabel.Text = "";
+                return transaction;
+            }
+            catch (FormatException exc)
+            {
+                ErrorLabel.Text = "Invalid format of provided data!";
+                return null;
+            }
         }
 
         private void HideFixedOutgoingsCheckBox_Click(object sender, EventArgs e)
@@ -187,6 +219,46 @@ namespace UPerfin.Dashboard
         {
             UpdateTimeFilters();
             UpdateDataGridView();
+        }
+
+        private void AddTransaction_Click(object sender, EventArgs e)
+        {
+            Transaction transaction = ValidateTransactionCreation();
+            if (transaction != null) AddTransactionToDatabase(transaction);
+            Refresh_Click(sender, e);
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            TransactionNameTextBox.Text = "Transaction Name...";
+            TransactionAmountTextBox.Text = "Transaction Amount...";
+            TransactionCategoryComboBox.Text = "Transaction Category";
+            FixedOutgoingsCheckBox.Checked = false;
+            ErrorLabel.Text = "";
+        }
+
+        private void TransactionsDataGridViewCell_Click(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DeleteTransaction_Click(object sender, EventArgs e)
+        {
+            Transaction selectedTransaction = (Transaction)TransactionsDataGridView.CurrentRow.DataBoundItem;
+            _context.Transaction.Remove(selectedTransaction);
+            _context.SaveChanges();
+            UpdateDataGridView();
+        }
+
+        private void SaveChanges_Click(object sender, EventArgs e)
+        {
+            Transaction selectedTransaction = (Transaction)TransactionsDataGridView.CurrentRow.DataBoundItem;
+            //Transaction removeTransaction = new Transaction { Id = selectedTransaction.Id };
+            _context.Transaction.Attach(selectedTransaction);
+            _context.Transaction.Remove(selectedTransaction);
+            _context.SaveChanges();
+            AddTransactionToDatabase(selectedTransaction);
+            _context.SaveChanges();
         }
     }
 }

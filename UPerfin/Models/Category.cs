@@ -9,7 +9,7 @@ namespace UPerfin.Models
     enum Category
     {
         Food,
-        HealthAndMedical,
+        Health,
         Shopping,
         Transport,
         Bills,

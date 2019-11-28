@@ -64,6 +64,11 @@
             this.OtherCheckBox = new System.Windows.Forms.CheckBox();
             this.LastWeekRadioButton = new System.Windows.Forms.RadioButton();
             this.EntirePeriodRadioButton = new System.Windows.Forms.RadioButton();
+            this.TransactionNameTextBox = new System.Windows.Forms.TextBox();
+            this.TransactionAmountTextBox = new System.Windows.Forms.TextBox();
+            this.TransactionCategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.FixedOutgoingsCheckBox = new System.Windows.Forms.CheckBox();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transactionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transactionDataSet)).BeginInit();
@@ -206,52 +211,56 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.button1.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(288, 553);
+            this.button1.Location = new System.Drawing.Point(288, 579);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 43);
+            this.button1.Size = new System.Drawing.Size(250, 43);
             this.button1.TabIndex = 21;
             this.button1.Text = "Add Transaction";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.AddTransaction_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.button3.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(500, 553);
+            this.button3.Location = new System.Drawing.Point(1017, 579);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 43);
+            this.button3.Size = new System.Drawing.Size(247, 43);
             this.button3.TabIndex = 22;
-            this.button3.Text = "Edit Transaction";
+            this.button3.Text = "Save Changes";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.SaveChanges_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.button4.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button4.Font = new System.Drawing.Font("Lato", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(288, 603);
+            this.button4.Location = new System.Drawing.Point(288, 630);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 43);
+            this.button4.Size = new System.Drawing.Size(250, 35);
             this.button4.TabIndex = 23;
-            this.button4.Text = "Refresh";
+            this.button4.Text = "Clear Inputs";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.Refresh_Click);
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.button5.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(500, 603);
+            this.button5.Location = new System.Drawing.Point(1014, 630);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 43);
+            this.button5.Size = new System.Drawing.Size(250, 67);
             this.button5.TabIndex = 24;
-            this.button5.Text = "Delete Transaction";
+            this.button5.Text = "Delete Selected Transaction";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.DeleteTransaction_Click);
             // 
             // FiltersLabel
             // 
@@ -319,7 +328,7 @@
             this.CategoriesLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
             this.CategoriesLabel.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CategoriesLabel.ForeColor = System.Drawing.Color.White;
-            this.CategoriesLabel.Location = new System.Drawing.Point(916, 238);
+            this.CategoriesLabel.Location = new System.Drawing.Point(916, 253);
             this.CategoriesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CategoriesLabel.Name = "CategoriesLabel";
             this.CategoriesLabel.Size = new System.Drawing.Size(348, 28);
@@ -346,7 +355,7 @@
             this.FoodCheckBox.AutoSize = true;
             this.FoodCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FoodCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.FoodCheckBox.Location = new System.Drawing.Point(920, 287);
+            this.FoodCheckBox.Location = new System.Drawing.Point(920, 302);
             this.FoodCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.FoodCheckBox.Name = "FoodCheckBox";
             this.FoodCheckBox.Size = new System.Drawing.Size(62, 21);
@@ -360,12 +369,12 @@
             this.HealthAndMedicalCheckBox.AutoSize = true;
             this.HealthAndMedicalCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.HealthAndMedicalCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.HealthAndMedicalCheckBox.Location = new System.Drawing.Point(920, 314);
+            this.HealthAndMedicalCheckBox.Location = new System.Drawing.Point(920, 329);
             this.HealthAndMedicalCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.HealthAndMedicalCheckBox.Name = "HealthAndMedicalCheckBox";
-            this.HealthAndMedicalCheckBox.Size = new System.Drawing.Size(151, 21);
+            this.HealthAndMedicalCheckBox.Size = new System.Drawing.Size(71, 21);
             this.HealthAndMedicalCheckBox.TabIndex = 44;
-            this.HealthAndMedicalCheckBox.Text = "Health and Medical";
+            this.HealthAndMedicalCheckBox.Text = "Health";
             this.HealthAndMedicalCheckBox.UseVisualStyleBackColor = false;
             this.HealthAndMedicalCheckBox.Click += new System.EventHandler(this.HideCategoryHealthAndMedicalCheckBox_Click);
             // 
@@ -374,7 +383,7 @@
             this.TransportCheckBox.AutoSize = true;
             this.TransportCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TransportCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.TransportCheckBox.Location = new System.Drawing.Point(920, 370);
+            this.TransportCheckBox.Location = new System.Drawing.Point(920, 385);
             this.TransportCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.TransportCheckBox.Name = "TransportCheckBox";
             this.TransportCheckBox.Size = new System.Drawing.Size(92, 21);
@@ -388,7 +397,7 @@
             this.ShoppingCheckBox.AutoSize = true;
             this.ShoppingCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ShoppingCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.ShoppingCheckBox.Location = new System.Drawing.Point(920, 342);
+            this.ShoppingCheckBox.Location = new System.Drawing.Point(920, 357);
             this.ShoppingCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.ShoppingCheckBox.Name = "ShoppingCheckBox";
             this.ShoppingCheckBox.Size = new System.Drawing.Size(90, 21);
@@ -402,7 +411,7 @@
             this.BillsCheckBox.AutoSize = true;
             this.BillsCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BillsCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.BillsCheckBox.Location = new System.Drawing.Point(920, 399);
+            this.BillsCheckBox.Location = new System.Drawing.Point(920, 414);
             this.BillsCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.BillsCheckBox.Name = "BillsCheckBox";
             this.BillsCheckBox.Size = new System.Drawing.Size(55, 21);
@@ -416,7 +425,7 @@
             this.HomeCheckBox.AutoSize = true;
             this.HomeCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.HomeCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.HomeCheckBox.Location = new System.Drawing.Point(1109, 287);
+            this.HomeCheckBox.Location = new System.Drawing.Point(1109, 302);
             this.HomeCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.HomeCheckBox.Name = "HomeCheckBox";
             this.HomeCheckBox.Size = new System.Drawing.Size(67, 21);
@@ -430,7 +439,7 @@
             this.EntertainmentCheckBox.AutoSize = true;
             this.EntertainmentCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.EntertainmentCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.EntertainmentCheckBox.Location = new System.Drawing.Point(1109, 314);
+            this.EntertainmentCheckBox.Location = new System.Drawing.Point(1109, 329);
             this.EntertainmentCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.EntertainmentCheckBox.Name = "EntertainmentCheckBox";
             this.EntertainmentCheckBox.Size = new System.Drawing.Size(118, 21);
@@ -444,7 +453,7 @@
             this.HolidaysCheckBox.AutoSize = true;
             this.HolidaysCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.HolidaysCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.HolidaysCheckBox.Location = new System.Drawing.Point(1109, 342);
+            this.HolidaysCheckBox.Location = new System.Drawing.Point(1109, 357);
             this.HolidaysCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.HolidaysCheckBox.Name = "HolidaysCheckBox";
             this.HolidaysCheckBox.Size = new System.Drawing.Size(84, 21);
@@ -458,7 +467,7 @@
             this.EducationCheckBox.AutoSize = true;
             this.EducationCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.EducationCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.EducationCheckBox.Location = new System.Drawing.Point(1109, 370);
+            this.EducationCheckBox.Location = new System.Drawing.Point(1109, 385);
             this.EducationCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.EducationCheckBox.Name = "EducationCheckBox";
             this.EducationCheckBox.Size = new System.Drawing.Size(93, 21);
@@ -472,7 +481,7 @@
             this.OtherCheckBox.AutoSize = true;
             this.OtherCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.OtherCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
-            this.OtherCheckBox.Location = new System.Drawing.Point(1109, 399);
+            this.OtherCheckBox.Location = new System.Drawing.Point(1109, 414);
             this.OtherCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.OtherCheckBox.Name = "OtherCheckBox";
             this.OtherCheckBox.Size = new System.Drawing.Size(66, 21);
@@ -513,11 +522,82 @@
             this.EntirePeriodRadioButton.UseVisualStyleBackColor = false;
             this.EntirePeriodRadioButton.Click += new System.EventHandler(this.ShowEntirePeriod_Click);
             // 
+            // TransactionNameTextBox
+            // 
+            this.TransactionNameTextBox.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TransactionNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.TransactionNameTextBox.Location = new System.Drawing.Point(288, 399);
+            this.TransactionNameTextBox.Name = "TransactionNameTextBox";
+            this.TransactionNameTextBox.Size = new System.Drawing.Size(250, 29);
+            this.TransactionNameTextBox.TabIndex = 55;
+            this.TransactionNameTextBox.Text = "Transaction Name...";
+            // 
+            // TransactionAmountTextBox
+            // 
+            this.TransactionAmountTextBox.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TransactionAmountTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.TransactionAmountTextBox.Location = new System.Drawing.Point(288, 442);
+            this.TransactionAmountTextBox.Name = "TransactionAmountTextBox";
+            this.TransactionAmountTextBox.Size = new System.Drawing.Size(250, 29);
+            this.TransactionAmountTextBox.TabIndex = 56;
+            this.TransactionAmountTextBox.Text = "Transaction Amount...";
+            // 
+            // TransactionCategoryComboBox
+            // 
+            this.TransactionCategoryComboBox.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TransactionCategoryComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.TransactionCategoryComboBox.FormattingEnabled = true;
+            this.TransactionCategoryComboBox.Items.AddRange(new object[] {
+            "Food",
+            "Health",
+            "Shopping",
+            "Transport",
+            "Bills",
+            "Home",
+            "Entertainment",
+            "Holidays",
+            "Education",
+            "Other"});
+            this.TransactionCategoryComboBox.Location = new System.Drawing.Point(288, 487);
+            this.TransactionCategoryComboBox.Name = "TransactionCategoryComboBox";
+            this.TransactionCategoryComboBox.Size = new System.Drawing.Size(250, 30);
+            this.TransactionCategoryComboBox.TabIndex = 57;
+            this.TransactionCategoryComboBox.Text = "Transaction Category";
+            // 
+            // FixedOutgoingsCheckBox
+            // 
+            this.FixedOutgoingsCheckBox.AutoSize = true;
+            this.FixedOutgoingsCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FixedOutgoingsCheckBox.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FixedOutgoingsCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.FixedOutgoingsCheckBox.Location = new System.Drawing.Point(288, 531);
+            this.FixedOutgoingsCheckBox.Name = "FixedOutgoingsCheckBox";
+            this.FixedOutgoingsCheckBox.Size = new System.Drawing.Size(204, 27);
+            this.FixedOutgoingsCheckBox.TabIndex = 58;
+            this.FixedOutgoingsCheckBox.Text = "Is it Fixed Outgoing?";
+            this.FixedOutgoingsCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ErrorLabel.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel.Location = new System.Drawing.Point(565, 579);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(319, 43);
+            this.ErrorLabel.TabIndex = 59;
+            this.ErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TransactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.ErrorLabel);
+            this.Controls.Add(this.FixedOutgoingsCheckBox);
+            this.Controls.Add(this.TransactionCategoryComboBox);
+            this.Controls.Add(this.TransactionAmountTextBox);
+            this.Controls.Add(this.TransactionNameTextBox);
             this.Controls.Add(this.EntirePeriodRadioButton);
             this.Controls.Add(this.LastWeekRadioButton);
             this.Controls.Add(this.OtherCheckBox);
@@ -585,6 +665,11 @@
             this.Controls.SetChildIndex(this.OtherCheckBox, 0);
             this.Controls.SetChildIndex(this.LastWeekRadioButton, 0);
             this.Controls.SetChildIndex(this.EntirePeriodRadioButton, 0);
+            this.Controls.SetChildIndex(this.TransactionNameTextBox, 0);
+            this.Controls.SetChildIndex(this.TransactionAmountTextBox, 0);
+            this.Controls.SetChildIndex(this.TransactionCategoryComboBox, 0);
+            this.Controls.SetChildIndex(this.FixedOutgoingsCheckBox, 0);
+            this.Controls.SetChildIndex(this.ErrorLabel, 0);
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transactionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transactionDataSet)).EndInit();
@@ -629,5 +714,10 @@
         private System.Windows.Forms.CheckBox OtherCheckBox;
         private System.Windows.Forms.RadioButton LastWeekRadioButton;
         private System.Windows.Forms.RadioButton EntirePeriodRadioButton;
+        private System.Windows.Forms.TextBox TransactionNameTextBox;
+        private System.Windows.Forms.TextBox TransactionAmountTextBox;
+        private System.Windows.Forms.ComboBox TransactionCategoryComboBox;
+        private System.Windows.Forms.CheckBox FixedOutgoingsCheckBox;
+        private System.Windows.Forms.Label ErrorLabel;
     }
 }
