@@ -15,10 +15,6 @@ namespace UPerfin.DAOs
         {
             var _userTable = _context.User;
             var _queryResult = _userTable.Where(user => user.Id == id);
-            var _tranTable = _context.Transaction;
-            var _tranResult = _tranTable.Where(tran => tran.UserId == id);
-            Transaction t = _tranResult.First();
-            Console.WriteLine(t.TransactionAmount);
 
             try
             {

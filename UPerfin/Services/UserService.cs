@@ -10,7 +10,7 @@ namespace UPerfin.Services
 {
     class UserService : IDataService<User>
     {
-        private readonly IDataDAO<User> _userDAO = new UserDAO();
+        private readonly UserDAO _userDAO = new UserDAO();
 
         public User GetElementById(int id)
         {
