@@ -25,6 +25,22 @@ namespace UPerfin.Dashboard.Navigation
             transactionForm.Show();
         }
 
+        public static void RunSavingForm(MainForm form, int userId)
+        {
+            form.Hide();
+            SavingForm savingForm = new SavingForm(userId);
+            savingForm.Closed += (s, args) => form.Close();
+            savingForm.Show();
+        }
+
+        public static void RunVehicleOperationForm(MainForm form, int userId)
+        {
+            form.Hide();
+            VehicleOperationForm vehicleOperationForm = new VehicleOperationForm(userId);
+            vehicleOperationForm.Closed += (s, args) => form.Close();
+            vehicleOperationForm.Show();
+        }
+
         public static void SignOutUser(MainForm form)
         {
             form.Hide();

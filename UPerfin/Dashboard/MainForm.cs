@@ -42,7 +42,7 @@ namespace UPerfin.Dashboard
 
         private void SavingPlansButton_Click(object sender, EventArgs e)
         {
-
+            MenuNavigation.RunSavingForm(this, userId);
         }
 
         private void ReportsButton_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace UPerfin.Dashboard
 
         private void VehicleOperationButton_Click(object sender, EventArgs e)
         {
-
+            MenuNavigation.RunVehicleOperationForm(this, userId);
         }
 
         private void DepositGainsButton_Click(object sender, EventArgs e)

@@ -67,10 +67,6 @@
             // 
             this.TransactionButton.FlatAppearance.BorderSize = 0;
             // 
-            // FixedOutgoingButton
-            // 
-            this.FixedOutgoingButton.FlatAppearance.BorderSize = 0;
-            // 
             // SavingPlanButton
             // 
             this.SavingPlanButton.FlatAppearance.BorderSize = 0;
@@ -207,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1280, 711);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.OutcomesMonthChart);
             this.Controls.Add(this.OutcomeCategoriesChart);
@@ -215,6 +211,8 @@
             this.Controls.Add(this.avatarPicture);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximumSize = new System.Drawing.Size(1298, 758);
+            this.MinimumSize = new System.Drawing.Size(1298, 758);
             this.Name = "DashboardForm";
             this.Load += new System.EventHandler(this.Dashboard_OnLoad);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -222,7 +220,6 @@
             this.Controls.SetChildIndex(this.DashboardButton, 0);
             this.Controls.SetChildIndex(this.HeaderLabel, 0);
             this.Controls.SetChildIndex(this.TransactionButton, 0);
-            this.Controls.SetChildIndex(this.FixedOutgoingButton, 0);
             this.Controls.SetChildIndex(this.SavingPlanButton, 0);
             this.Controls.SetChildIndex(this.ReportButton, 0);
             this.Controls.SetChildIndex(this.VehicleOperationButton, 0);

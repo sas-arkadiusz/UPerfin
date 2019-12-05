@@ -124,11 +124,23 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Navigation\MenuNavigation.cs" />
+    <Compile Include="Dashboard\SavingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\SavingForm.Designer.cs">
+      <DependentUpon>SavingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\TransactionForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard\TransactionForm.Designer.cs">
       <DependentUpon>TransactionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\VehicleOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\VehicleOperationForm.Designer.cs">
+      <DependentUpon>VehicleOperationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Transaction.cs">
@@ -171,6 +183,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>uperfindbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Vehicle\Car.cs" />
+    <Compile Include="Vehicle\Truck.cs" />
+    <Compile Include="Vehicle\Vehicle.cs" />
     <EmbeddedResource Include="AuthenticationProcess\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,8 +207,14 @@
     <EmbeddedResource Include="Dashboard\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\SavingForm.resx">
+      <DependentUpon>SavingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\TransactionForm.resx">
       <DependentUpon>TransactionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\VehicleOperationForm.resx">
+      <DependentUpon>VehicleOperationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
