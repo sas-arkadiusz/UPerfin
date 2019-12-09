@@ -98,11 +98,7 @@
             // DepositGainButton
             // 
             this.DepositGainButton.FlatAppearance.BorderSize = 0;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            // 
+            //  
             // SignOutButton
             // 
             this.SignOutButton.FlatAppearance.BorderSize = 0;
@@ -634,7 +630,6 @@
             this.Controls.SetChildIndex(this.VehicleOperationButton, 0);
             this.Controls.SetChildIndex(this.CalculatorLabel, 0);
             this.Controls.SetChildIndex(this.DepositGainButton, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.SignOutButton, 0);
             this.Controls.SetChildIndex(this.SettingsButton, 0);
             this.Controls.SetChildIndex(this.NavigationLabel, 0);

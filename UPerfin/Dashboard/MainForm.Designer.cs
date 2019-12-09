@@ -39,7 +39,6 @@
             this.VehicleOperationButton = new System.Windows.Forms.Button();
             this.CalculatorLabel = new System.Windows.Forms.Label();
             this.DepositGainButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.SignOutButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.NavigationLabel = new System.Windows.Forms.Label();
@@ -69,7 +68,7 @@
             this.DashboardButton.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DashboardButton.ForeColor = System.Drawing.Color.White;
             this.DashboardButton.Location = new System.Drawing.Point(0, 118);
-            this.DashboardButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DashboardButton.Margin = new System.Windows.Forms.Padding(4);
             this.DashboardButton.Name = "DashboardButton";
             this.DashboardButton.Size = new System.Drawing.Size(256, 43);
             this.DashboardButton.TabIndex = 3;
@@ -98,7 +97,7 @@
             this.TransactionButton.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.TransactionButton.ForeColor = System.Drawing.Color.White;
             this.TransactionButton.Location = new System.Drawing.Point(0, 169);
-            this.TransactionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TransactionButton.Margin = new System.Windows.Forms.Padding(4);
             this.TransactionButton.Name = "TransactionButton";
             this.TransactionButton.Size = new System.Drawing.Size(256, 43);
             this.TransactionButton.TabIndex = 5;
@@ -113,12 +112,12 @@
             this.SavingPlanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SavingPlanButton.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SavingPlanButton.ForeColor = System.Drawing.Color.White;
-            this.SavingPlanButton.Location = new System.Drawing.Point(0, 270);
-            this.SavingPlanButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SavingPlanButton.Location = new System.Drawing.Point(0, 220);
+            this.SavingPlanButton.Margin = new System.Windows.Forms.Padding(4);
             this.SavingPlanButton.Name = "SavingPlanButton";
             this.SavingPlanButton.Size = new System.Drawing.Size(256, 43);
             this.SavingPlanButton.TabIndex = 7;
-            this.SavingPlanButton.Text = "Saving Plans";
+            this.SavingPlanButton.Text = "Incomes";
             this.SavingPlanButton.UseVisualStyleBackColor = false;
             this.SavingPlanButton.Click += new System.EventHandler(this.SavingPlansButton_Click);
             // 
@@ -129,8 +128,8 @@
             this.ReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReportButton.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ReportButton.ForeColor = System.Drawing.Color.White;
-            this.ReportButton.Location = new System.Drawing.Point(0, 320);
-            this.ReportButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReportButton.Location = new System.Drawing.Point(0, 271);
+            this.ReportButton.Margin = new System.Windows.Forms.Padding(4);
             this.ReportButton.Name = "ReportButton";
             this.ReportButton.Size = new System.Drawing.Size(256, 43);
             this.ReportButton.TabIndex = 8;
@@ -145,8 +144,8 @@
             this.VehicleOperationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VehicleOperationButton.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.VehicleOperationButton.ForeColor = System.Drawing.Color.White;
-            this.VehicleOperationButton.Location = new System.Drawing.Point(0, 425);
-            this.VehicleOperationButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VehicleOperationButton.Location = new System.Drawing.Point(0, 376);
+            this.VehicleOperationButton.Margin = new System.Windows.Forms.Padding(4);
             this.VehicleOperationButton.Name = "VehicleOperationButton";
             this.VehicleOperationButton.Size = new System.Drawing.Size(256, 43);
             this.VehicleOperationButton.TabIndex = 9;
@@ -159,7 +158,7 @@
             this.CalculatorLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(150)))));
             this.CalculatorLabel.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CalculatorLabel.ForeColor = System.Drawing.Color.White;
-            this.CalculatorLabel.Location = new System.Drawing.Point(0, 378);
+            this.CalculatorLabel.Location = new System.Drawing.Point(0, 329);
             this.CalculatorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CalculatorLabel.Name = "CalculatorLabel";
             this.CalculatorLabel.Size = new System.Drawing.Size(256, 43);
@@ -174,30 +173,14 @@
             this.DepositGainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DepositGainButton.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DepositGainButton.ForeColor = System.Drawing.Color.White;
-            this.DepositGainButton.Location = new System.Drawing.Point(0, 476);
-            this.DepositGainButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DepositGainButton.Location = new System.Drawing.Point(0, 427);
+            this.DepositGainButton.Margin = new System.Windows.Forms.Padding(4);
             this.DepositGainButton.Name = "DepositGainButton";
             this.DepositGainButton.Size = new System.Drawing.Size(256, 43);
             this.DepositGainButton.TabIndex = 11;
             this.DepositGainButton.Text = "Deposit Gains";
             this.DepositGainButton.UseVisualStyleBackColor = false;
             this.DepositGainButton.Click += new System.EventHandler(this.DepositGainsButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(200)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 220);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(256, 43);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Budgets";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.BudgetsButton_Click);
             // 
             // SignOutButton
             // 
@@ -207,7 +190,7 @@
             this.SignOutButton.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SignOutButton.ForeColor = System.Drawing.Color.White;
             this.SignOutButton.Location = new System.Drawing.Point(0, 662);
-            this.SignOutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SignOutButton.Margin = new System.Windows.Forms.Padding(4);
             this.SignOutButton.Name = "SignOutButton";
             this.SignOutButton.Size = new System.Drawing.Size(256, 43);
             this.SignOutButton.TabIndex = 13;
@@ -223,7 +206,7 @@
             this.SettingsButton.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SettingsButton.ForeColor = System.Drawing.Color.White;
             this.SettingsButton.Location = new System.Drawing.Point(0, 612);
-            this.SettingsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SettingsButton.Margin = new System.Windows.Forms.Padding(4);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(256, 43);
             this.SettingsButton.TabIndex = 14;
@@ -252,7 +235,6 @@
             this.Controls.Add(this.NavigationLabel);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.SignOutButton);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.DepositGainButton);
             this.Controls.Add(this.CalculatorLabel);
             this.Controls.Add(this.VehicleOperationButton);
@@ -264,7 +246,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UPerfin";
@@ -284,7 +266,6 @@
         protected System.Windows.Forms.Button VehicleOperationButton;
         protected System.Windows.Forms.Label CalculatorLabel;
         protected System.Windows.Forms.Button DepositGainButton;
-        protected System.Windows.Forms.Button button2;
         protected System.Windows.Forms.Button SignOutButton;
         protected System.Windows.Forms.Button SettingsButton;
         protected System.Windows.Forms.Label NavigationLabel;

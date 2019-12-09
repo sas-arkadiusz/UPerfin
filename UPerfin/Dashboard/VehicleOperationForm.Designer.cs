@@ -52,7 +52,6 @@
             this.MileagePurchaseTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.PurchaseCostTextBox = new System.Windows.Forms.TextBox();
-            this.VehiclePurcharsePage = new System.Windows.Forms.TabPage();
             this.VehicleTabControl.SuspendLayout();
             this.VehicleMaintenancePage.SuspendLayout();
             this.SuspendLayout();
@@ -82,10 +81,6 @@
             // 
             this.DepositGainButton.FlatAppearance.BorderSize = 0;
             // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            // 
             // SignOutButton
             // 
             this.SignOutButton.FlatAppearance.BorderSize = 0;
@@ -97,12 +92,11 @@
             // VehicleTabControl
             // 
             this.VehicleTabControl.Controls.Add(this.VehicleMaintenancePage);
-            this.VehicleTabControl.Controls.Add(this.VehiclePurcharsePage);
             this.VehicleTabControl.Font = new System.Drawing.Font("Lato", 11F);
-            this.VehicleTabControl.Location = new System.Drawing.Point(263, 12);
+            this.VehicleTabControl.Location = new System.Drawing.Point(259, 0);
             this.VehicleTabControl.Name = "VehicleTabControl";
             this.VehicleTabControl.SelectedIndex = 0;
-            this.VehicleTabControl.Size = new System.Drawing.Size(1005, 693);
+            this.VehicleTabControl.Size = new System.Drawing.Size(1021, 720);
             this.VehicleTabControl.TabIndex = 16;
             // 
             // VehicleMaintenancePage
@@ -132,7 +126,7 @@
             this.VehicleMaintenancePage.Location = new System.Drawing.Point(4, 31);
             this.VehicleMaintenancePage.Name = "VehicleMaintenancePage";
             this.VehicleMaintenancePage.Padding = new System.Windows.Forms.Padding(3);
-            this.VehicleMaintenancePage.Size = new System.Drawing.Size(997, 658);
+            this.VehicleMaintenancePage.Size = new System.Drawing.Size(1013, 685);
             this.VehicleMaintenancePage.TabIndex = 0;
             this.VehicleMaintenancePage.Text = "Vehicle Maintenance";
             this.VehicleMaintenancePage.UseVisualStyleBackColor = true;
@@ -365,16 +359,6 @@
             this.PurchaseCostTextBox.TabIndex = 0;
             this.PurchaseCostTextBox.Text = "Purchase Cost...";
             // 
-            // VehiclePurcharsePage
-            // 
-            this.VehiclePurcharsePage.Location = new System.Drawing.Point(4, 31);
-            this.VehiclePurcharsePage.Name = "VehiclePurcharsePage";
-            this.VehiclePurcharsePage.Padding = new System.Windows.Forms.Padding(3);
-            this.VehiclePurcharsePage.Size = new System.Drawing.Size(997, 658);
-            this.VehiclePurcharsePage.TabIndex = 1;
-            this.VehiclePurcharsePage.Text = "Vehicle Purcharse";
-            this.VehiclePurcharsePage.UseVisualStyleBackColor = true;
-            // 
             // VehicleOperationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -395,7 +379,6 @@
             this.Controls.SetChildIndex(this.VehicleOperationButton, 0);
             this.Controls.SetChildIndex(this.CalculatorLabel, 0);
             this.Controls.SetChildIndex(this.DepositGainButton, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.SignOutButton, 0);
             this.Controls.SetChildIndex(this.SettingsButton, 0);
             this.Controls.SetChildIndex(this.NavigationLabel, 0);
@@ -411,7 +394,6 @@
 
         private System.Windows.Forms.TabControl VehicleTabControl;
         private System.Windows.Forms.TabPage VehicleMaintenancePage;
-        private System.Windows.Forms.TabPage VehiclePurcharsePage;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox PurchaseCostTextBox;
         private System.Windows.Forms.RadioButton TruckRadioButton;

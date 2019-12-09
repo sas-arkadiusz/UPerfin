@@ -35,11 +35,6 @@ namespace UPerfin.Dashboard
 
         }
 
-        private void BudgetsButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SavingPlansButton_Click(object sender, EventArgs e)
         {
             MenuNavigation.RunSavingForm(this, userId);
@@ -57,7 +52,7 @@ namespace UPerfin.Dashboard
 
         private void DepositGainsButton_Click(object sender, EventArgs e)
         {
-
+            MenuNavigation.RunDepositGainsForm(this, userId);
         }
 
         private void SettingsButton_Click(object sender, EventArgs e)

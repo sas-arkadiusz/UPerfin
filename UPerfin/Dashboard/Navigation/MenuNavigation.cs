@@ -41,6 +41,14 @@ namespace UPerfin.Dashboard.Navigation
             vehicleOperationForm.Show();
         }
 
+        public static void RunDepositGainsForm(MainForm form, int userId)
+        {
+            form.Hide();
+            DepositGainsForm depositGainsForm = new DepositGainsForm(userId);
+            depositGainsForm.Closed += (s, args) => form.Close();
+            depositGainsForm.Show();
+        }
+
         public static void SignOutUser(MainForm form)
         {
             form.Hide();

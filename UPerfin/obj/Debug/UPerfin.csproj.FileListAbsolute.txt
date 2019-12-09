@@ -24,3 +24,4 @@ C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.Dashboa
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.TransactionForm.resources
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.SavingForm.resources
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.VehicleOperationForm.resources
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.DepositGainsForm.resources

@@ -55,10 +55,6 @@
             // 
             this.DepositGainButton.FlatAppearance.BorderSize = 0;
             // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            // 
             // SignOutButton
             // 
             this.SignOutButton.FlatAppearance.BorderSize = 0;

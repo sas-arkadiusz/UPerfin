@@ -117,6 +117,12 @@
     <Compile Include="Dashboard\DashboardForm2.Designer.cs">
       <DependentUpon>DashboardForm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\DepositGainsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DepositGainsForm.Designer.cs">
+      <DependentUpon>DepositGainsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,7 @@
     <Compile Include="Dashboard\VehicleOperationForm.Designer.cs">
       <DependentUpon>VehicleOperationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deposits\DepositsCalculator.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Transaction.cs">
       <DependentUpon>UserModel.tt</DependentUpon>
@@ -203,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\DashboardForm2.resx">
       <DependentUpon>DashboardForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DepositGainsForm.resx">
+      <DependentUpon>DepositGainsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
