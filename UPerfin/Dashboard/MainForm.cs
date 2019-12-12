@@ -30,11 +30,6 @@ namespace UPerfin.Dashboard
             MenuNavigation.RunTransactionForm(this, userId);
         }
 
-        private void FixedOutgoingsButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SavingPlansButton_Click(object sender, EventArgs e)
         {
             MenuNavigation.RunSavingForm(this, userId);
@@ -42,7 +37,7 @@ namespace UPerfin.Dashboard
 
         private void ReportsButton_Click(object sender, EventArgs e)
         {
-
+            MenuNavigation.RunReportForm(this, userId);
         }
 
         private void VehicleOperationButton_Click(object sender, EventArgs e)
@@ -57,7 +52,7 @@ namespace UPerfin.Dashboard
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-
+            MenuNavigation.RunSettingsForm(this, userId);
         }
 
         private void SignOutButton_Click(object sender, EventArgs e)

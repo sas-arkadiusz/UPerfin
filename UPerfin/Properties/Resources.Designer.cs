@@ -133,6 +133,16 @@ namespace UPerfin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ninja_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Ninja_64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PasswordPicture_32x32 {
             get {
                 object obj = ResourceManager.GetObject("PasswordPicture_32x32", resourceCulture);

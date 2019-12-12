@@ -1,0 +1,54 @@
+Income Report
+January: 0
+February: 0
+March: 0
+April: 0
+May: 0
+June: 0
+July: 0
+August: 0
+September: 0
+October: 0
+November: 0
+December: 150,00
+
+Outcome Report
+January: 0
+February: 0
+March: 0
+April: 0
+May: 0
+June: 0
+July: 0
+August: 0
+September: 0
+October: 0
+November: 277,28
+December: 20,58
+
+Category Outcome Report
+Food: 67,30
+Health: 0
+Shopping: 0
+Transport: 149,99
+Bills: 80,57
+Home: 0
+Entertainment: 0
+Holidays: 0
+Education: 0
+Other: 0
+
+Balannce Report
+January: 0
+February: 0
+March: 0
+April: 0
+May: 0
+June: 0
+July: 0
+August: 0
+September: 0
+October: 0
+November: -277,28
+December: 129,42
+

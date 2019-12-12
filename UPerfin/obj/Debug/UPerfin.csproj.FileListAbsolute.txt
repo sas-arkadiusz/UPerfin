@@ -25,3 +25,7 @@ C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.Transac
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.VehicleOperationForm.resources
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.DepositGainsForm.resources
 C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.IncomeForm.resources
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.SettingsForm.resources
+C:\software-projects\UPerfin\UPerfin\UPerfin\obj\Debug\UPerfin.Dashboard.ReportForm.resources
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\Newtonsoft.Json.dll
+C:\software-projects\UPerfin\UPerfin\UPerfin\bin\Debug\Newtonsoft.Json.xml

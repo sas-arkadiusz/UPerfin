@@ -33,6 +33,14 @@ namespace UPerfin.Dashboard.Navigation
             savingForm.Show();
         }
 
+        public static void RunReportForm(MainForm form, int userId)
+        {
+            form.Hide();
+            ReportForm reportForm = new ReportForm(userId);
+            reportForm.Closed += (s, args) => form.Close();
+            reportForm.Show();
+        }
+
         public static void RunVehicleOperationForm(MainForm form, int userId)
         {
             form.Hide();
@@ -47,6 +55,14 @@ namespace UPerfin.Dashboard.Navigation
             DepositGainsForm depositGainsForm = new DepositGainsForm(userId);
             depositGainsForm.Closed += (s, args) => form.Close();
             depositGainsForm.Show();
+        }
+
+        public static void RunSettingsForm(MainForm form, int userId)
+        {
+            form.Hide();
+            SettingsForm settingsForm = new SettingsForm(userId);
+            settingsForm.Closed += (s, args) => form.Close();
+            settingsForm.Show();
         }
 
         public static void SignOutUser(MainForm form)

@@ -13,6 +13,7 @@ namespace UPerfin.Constants
         private static Image _avocadoAvatar = Properties.Resources.Avocado_64x64;
         private static Image _batmanAvatar = Properties.Resources.Batman_64x64;
         private static Image _santaAvatar = Properties.Resources.Santa_64x64;
+        private static Image _ninjaAvatar = Properties.Resources.Ninja_64x64;
 
         public static Image GetAvatar(string avatarName)
         {
@@ -24,6 +25,8 @@ namespace UPerfin.Constants
                     return _batmanAvatar;
                 case "santa":
                     return _santaAvatar;
+                case "ninja":
+                    return _ninjaAvatar;
             }
             return null;
         }
