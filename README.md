@@ -19,4 +19,4 @@ This project is created with:
 ![login-form](https://i.imgur.com/aDEpJqo.png) <br><br>
 
 * Dashboard: <br><br>
-![dashboard-form]https://i.imgur.com/HkC8cGL.png) <br><br>
+![dashboard-form](https://i.imgur.com/HkC8cGL.png) <br><br>
