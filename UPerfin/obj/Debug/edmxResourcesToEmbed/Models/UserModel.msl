@@ -26,5 +26,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Income">
+      <EntityTypeMapping TypeName="uperfindbModel.Income">
+        <MappingFragment StoreEntitySet="Income">
+          <ScalarProperty Name="IncomeDate" ColumnName="IncomeDate" />
+          <ScalarProperty Name="IncomeAmount" ColumnName="IncomeAmount" />
+          <ScalarProperty Name="IncomeName" ColumnName="IncomeName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

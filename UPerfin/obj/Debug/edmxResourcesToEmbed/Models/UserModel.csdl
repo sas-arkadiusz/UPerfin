@@ -11,6 +11,7 @@
     <Property Name="PIN" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Avatar" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Transaction" Relationship="uperfindbModel.FK__Transacti__UserI__73BA3083" FromRole="User" ToRole="Transaction" />
+    <NavigationProperty Name="Income" Relationship="uperfindbModel.FK__Income__UserId__02FC7413" FromRole="User" ToRole="Income" />
   </EntityType>
   <EntityContainer Name="uperfindbEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="User" EntityType="Self.User" />
@@ -18,6 +19,11 @@
     <AssociationSet Name="FK__Transacti__UserI__73BA3083" Association="uperfindbModel.FK__Transacti__UserI__73BA3083">
       <End Role="User" EntitySet="User" />
       <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <EntitySet Name="Income" EntityType="uperfindbModel.Income" />
+    <AssociationSet Name="FK__Income__UserId__02FC7413" Association="uperfindbModel.FK__Income__UserId__02FC7413">
+      <End Role="User" EntitySet="User" />
+      <End Role="Income" EntitySet="Income" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Transaction">
@@ -41,6 +47,29 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Transaction">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Income">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="IncomeName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IncomeAmount" Type="Decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="IncomeDate" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="User" Relationship="uperfindbModel.FK__Income__UserId__02FC7413" FromRole="Income" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__Income__UserId__02FC7413">
+    <End Type="uperfindbModel.User" Role="User" Multiplicity="1" />
+    <End Type="uperfindbModel.Income" Role="Income" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Income">
         <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>

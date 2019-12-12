@@ -8,6 +8,8 @@
         <EntityTypeShape EntityType="uperfindbModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="uperfindbModel.Transaction" Width="1.5" PointX="3" PointY="5.25" />
         <AssociationConnector Association="uperfindbModel.FK__Transacti__UserI__73BA3083" />
+        <EntityTypeShape EntityType="uperfindbModel.Income" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="uperfindbModel.FK__Income__UserId__02FC7413" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

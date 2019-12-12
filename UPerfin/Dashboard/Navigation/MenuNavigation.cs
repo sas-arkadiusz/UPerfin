@@ -28,7 +28,7 @@ namespace UPerfin.Dashboard.Navigation
         public static void RunSavingForm(MainForm form, int userId)
         {
             form.Hide();
-            SavingForm savingForm = new SavingForm(userId);
+            IncomeForm savingForm = new IncomeForm(userId);
             savingForm.Closed += (s, args) => form.Close();
             savingForm.Show();
         }

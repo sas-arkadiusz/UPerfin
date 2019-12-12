@@ -253,7 +253,6 @@ namespace UPerfin.Dashboard
         private void SaveChanges_Click(object sender, EventArgs e)
         {
             Transaction selectedTransaction = (Transaction)TransactionsDataGridView.CurrentRow.DataBoundItem;
-            //Transaction removeTransaction = new Transaction { Id = selectedTransaction.Id };
             _context.Transaction.Attach(selectedTransaction);
             _context.Transaction.Remove(selectedTransaction);
             _context.SaveChanges();

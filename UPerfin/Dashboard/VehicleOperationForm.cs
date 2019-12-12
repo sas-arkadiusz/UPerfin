@@ -30,11 +30,13 @@ namespace UPerfin.Dashboard
             {
                 CostOfTheEmployeeLabel.Visible = false;
                 EmployeeSalaryTextBox.Visible = false;
+                EmployeeSalaryLabel.Visible = false;
             }
             else if(TruckRadioButton.Checked)
             {
                 CostOfTheEmployeeLabel.Visible = true;
                 EmployeeSalaryTextBox.Visible = true;
+                EmployeeSalaryLabel.Visible = true;
             }
         }
 
