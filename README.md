@@ -13,9 +13,11 @@ It also offers many additional tools that allow for even better management and c
 ## Technologies
 This project is created with:
 * C#
+* Entity Framework
+* MSSQL
 
 ## Aplication
-* Logginf Form: <br><br>
+* Logging Form: <br><br>
 ![login-form](https://i.imgur.com/aDEpJqo.png) <br><br>
 
 * Dashboard: <br><br>
